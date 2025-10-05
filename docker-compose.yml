@@ -1,0 +1,50 @@
+# docker-compose.yml
+
+# Define services to host.
+#
+#serviceName:
+#  image:
+#  restart: unless-stopped
+#  container_name:
+#  hostname:
+#  networks:
+#    - proxy
+#  volumes:
+#    - /localhost/folder:/docker/container/folder
+#    - type: bind
+#      source: /localhost/folder
+#      target: /docker/container/folder
+
+services:
+  # apache will be used for hosting files for services.
+  # Splunk license file is my first use case.
+  apache:
+    image: httpd:2.4.65
+    restart: unless-stopped
+    container_name: apache
+    hostname: apache.home.freelancefool.com
+    ports:
+      - "80:80"
+    volumes:
+      - ./apache:/usr/local/apache2/htdocs/
+
+  splunk:
+    image: splunk/splunk:10.0.1-rhel9
+    restart: unless-stopped
+    container_name: splunk
+    hostname: splunk.home.freelancefool.com
+    ports:
+      - "8000:8000"
+      - "8088:8088"
+      - "8089:8089"
+      - "9997:9997"
+    command:
+      - SPLUNK_PASSWORD=changeme
+      - SPLUNK_START_ARGS=--accept-license
+      - SPLUNK_GENERAL_TERMS=--accept-sgt-current-at-splunk-com
+      - SPLUNK_LICENSE_URI=http://apache.home.freelancefool.com/Splunk.License
+      - SPLUNK_USER=jsmith
+      - SPLUNK_GROUP=jsmith
+    volumes:
+      - ./splunk/etc:/opt/splunk/etc
+      - ./splunk/var:/opt/splunk/var
