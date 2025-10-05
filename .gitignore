@@ -1,2 +1,6 @@
 ### License file
 Splunk.License
+
+### Ignore Data Directories
+splunk/etc/
+splunk/var/
