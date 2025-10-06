@@ -7,3 +7,4 @@ splunk/var/
 
 ### Environmental secrets file
 .env
+.smbcredentials
