@@ -30,7 +30,7 @@ services:
 
   splunk:
     image: splunk/splunk:10.0.1-rhel9
-    restart: unless-stopped
+    restart: no #unless-stopped
     container_name: splunk
     hostname: splunk.home.freelancefool.com
     ports:
@@ -39,12 +39,12 @@ services:
       - "8089:8089"
       - "9997:9997"
     command:
-      - SPLUNK_PASSWORD=changeme
+      - SPLUNK_PASSWORD=${SPLUNK_PASSWD}
       - SPLUNK_START_ARGS=--accept-license
       - SPLUNK_GENERAL_TERMS=--accept-sgt-current-at-splunk-com
       - SPLUNK_LICENSE_URI=http://apache.home.freelancefool.com/Splunk.License
-      - SPLUNK_USER=jsmith
-      - SPLUNK_GROUP=jsmith
+      - SPLUNK_USER=splunk
+      - SPLUNK_GROUP=splunk
     volumes:
       - ./splunk/etc:/opt/splunk/etc
       - ./splunk/var:/opt/splunk/var
