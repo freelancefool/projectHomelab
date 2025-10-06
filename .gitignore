@@ -4,3 +4,6 @@ Splunk.License
 ### Ignore Data Directories
 splunk/etc/
 splunk/var/
+
+### Environmental secrets file
+.env
