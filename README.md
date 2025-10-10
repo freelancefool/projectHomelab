@@ -37,6 +37,26 @@ I did initially consider using kubernetes, but it seems like overkill since I do
 
 I've been playing with Docker on and off on my Intel NUC. I'll probably miss some steps about how I got that installed here.
 
+### SC4S
+
+The Splunk documents for SC4S need a couple host level changes.
+
+Add the following to `/etc/sysctl.conf`
+```
+net.core.rmem_default = 17039360
+net.core.rmem_max = 17039360
+```
+
+Apply to kernel:
+```
+sysctl -p 
+```
+
+The rest of the configuration for SC4S can be found at the following link:
+https://splunk.github.io/splunk-connect-for-syslog/main/gettingstarted/quickstart_guide/
+
+The system level changes are being documented in this README.md. I'm treating it both as a repo that can be viewed/used by anyone who finds it, as well as documentation for this project. 
+
 ### Let's Encrypt
 
 If possible, I would like to have real TLS certificates. In order to do so, I'll document everything I'm doing to make this automation work.
