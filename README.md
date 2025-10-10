@@ -17,7 +17,7 @@ I did initially consider using kubernetes, but it seems like overkill since I do
     2. Splunk.
     3. SC4S.
     4. Ansible.
-    5. Clay's microservices.
+    5. freelancefool's microservices.
         * Something to query the solar gateway.
         * Something to query the ecobee.
 3. Learn Ansible
@@ -37,4 +37,4 @@ If possible, I would like to have real TLS certificates. In order to do so, I'll
 
 #### Cloudflare
 
-I'm probably insane for doing this, but Cloudflare offers automated DNS record updates so I can get TLS certificates through an automatic fashion without needing to expose the host externally. This is a good thing, because I cannot host anything locally on port 80 or 443. It's blocked by my ISP because they're sane. So I'm doing this as a way to handle TLS certs instead of offering up a hidden file for the certificate provider to download to validate I own the host and domain.
+I'm probably crazy for doing this, but Cloudflare offers automated DNS record updates so I can get TLS certificates through an automatic fashion without needing to expose the host externally. This is a good thing, because I cannot host anything locally on port 80 or 443. It's blocked by my ISP because they're sane. So I'm doing this as a way to handle TLS certs instead of offering up a hidden file for the certificate provider to download to validate I own the host and domain.
