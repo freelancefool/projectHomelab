@@ -17,7 +17,8 @@ I did initially consider using kubernetes, but it seems like overkill since I do
     2. Splunk.
     3. SC4S.
     4. Ansible.
-    5. freelancefool's microservices.
+    5. nginx.
+    6. freelancefool's microservices.
         * Something to query the solar gateway.
         * Something to query the ecobee.
 3. Learn Ansible
@@ -26,6 +27,11 @@ I did initially consider using kubernetes, but it seems like overkill since I do
     3. GitHub Actions will probably also help with the deployment aspect.
     4. Build a dev enviroment?
         * When we get to the point where I am try automation for testing, I will probably buy a NUC-clone to have a second host at home.
+4. Learn GitHub
+    1. I understand how version control works at a basic level.
+    2. I have no idea how tagging works with releases.
+    3. I have no idea how Projects works with timelines.
+
 
 ## Configuration
 
