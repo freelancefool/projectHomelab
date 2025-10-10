@@ -8,11 +8,13 @@ I did initially consider using kubernetes, but it seems like overkill since I do
 1. Get better with docker.
     1. I understand the basics of volumes, bind mounts, and some basics for docker compose.
         * Better understand the difference between volumes and bind mounts and when to use them. 
-    2. Learn docker compose. 
+    2. What is a Dockerfile?
+        * The Apache httpd docs mention using a Dockerfile to build images instead of copying files. This is something else to learn. Probably as a mid-step to get to compose.
+    3. Learn docker compose. 
         * I barely understand how to build a compose file. I need to learn more options for this and how to use it better.
 2. Configure microservices for home.
-    1. Splunk.
-    2. httpd.
+    1. httpd.
+    2. Splunk.
     3. SC4S.
     4. Ansible.
     5. Clay's microservices.
