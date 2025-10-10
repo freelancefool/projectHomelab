@@ -1,10 +1,6 @@
-### License file
+### Splunk License File
 apache/data/Splunk.License
 
-### Ignore Data Directories
-splunk/etc/
-splunk/var/
-
-### Environmental secrets file
+### Environmental Secrets File
 .env
 .smbcredentials
