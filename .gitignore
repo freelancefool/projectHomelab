@@ -1,5 +1,5 @@
 ### License file
-Splunk.License
+apache/data/Splunk.License
 
 ### Ignore Data Directories
 splunk/etc/
