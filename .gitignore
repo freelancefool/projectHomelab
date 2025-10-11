@@ -4,3 +4,4 @@ apache/data/Splunk.License
 ### Environmental Secrets File
 .env
 .smbcredentials
+sc4s/env_file
