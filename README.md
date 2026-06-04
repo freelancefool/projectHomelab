@@ -68,6 +68,16 @@ Lifted from the dokuwiki docs as a starting point:
 
 #### To Do
 
+### httpd
+
+In order to deploy custom apps and apps from Splunkbase, I'm going to kick off a local instance of httpd on port 8181. 
+
+I didn't actually start with a command here to map the ports and volumes. I just threw it all in docker-compose.yaml after using the Splunk container as a template. Worked pretty well.
+
+#### To Do 
+
+Move things around so that httpd will kick off before the Splunk container. This will allow me to collapse the splunk-include folder into the splunk-apps folder since it can be hosted over the network. 
+
 
 ## Requirements
 
@@ -84,6 +94,7 @@ To make it easy to track the ports in use with the homelab, have a table:
 | 8080  | dokuwiki  | Web UI                |
 | 8088  | Splunk    | HEC listener          |
 | 8089  | Splunk    | REST API              |
+| 8181  | httpd     | http server for apps  |
 | 8191  | Splunk    | App Key Value Store   |
 | 9997  | Splunk    | Splunk receiver       |
 
