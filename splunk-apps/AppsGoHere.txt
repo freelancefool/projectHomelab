@@ -1,0 +1,2 @@
+Splunkbase and custom apps go in the splunk-apps folder.
+This file exists to force folder creation.
