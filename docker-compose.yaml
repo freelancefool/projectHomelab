@@ -13,7 +13,7 @@ services:
       #- SPLUNK_HEC_TOKEN=$token
       # Instead of using a volume path, this can be a valid URI.
       - SPLUNK_LICENSE_URI=/tmp/license/Splunk.License
-      # The below apps are Splunk_TA_windows, Splunk_TA_nix
+      # The below apps are variables in .env.
       - SPLUNK_APPS_URL
       # If using Splunkbase to pull apps, uncomment the following 2 lines. Swap $username with a functional username.
       - SPLUNKBASE_USERNAME
