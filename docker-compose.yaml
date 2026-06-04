@@ -19,6 +19,7 @@ services:
       - SPLUNKBASE_USERNAME
       - SPLUNKBASE_PASSWORD
       - SPLUNK_PASSWORD
+    restart: unless-stopped
     ports:
       - 8000:8000
       - 8065:8065
@@ -30,3 +31,11 @@ services:
       - ./splunk-include/Splunk.License:/tmp/license/Splunk.License
       - splunk-var:/opt/splunk/var
       - splunk-etc:/opt/splunk/etc
+
+  splunk-apps:
+    image: httpd:latest
+    container_name: splunk-apps
+    ports:
+      - 8181:80
+    volumes:
+      - ./splunk-apps:/usr/local/apache2/htdocs/
