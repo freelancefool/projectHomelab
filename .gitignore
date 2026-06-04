@@ -4,6 +4,11 @@ Splunk.License
 # Never include secrets.
 .env
 
+# Never include Splunk apps.
+/splunk-apps/*.tgz
+/splunk-apps/*.tar.gz
+/splunk-apps/*.spl
+
 # Ignore OS files
 .DS_Store
 .DS_Store?
