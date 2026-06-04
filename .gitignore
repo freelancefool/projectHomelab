@@ -1,6 +1,9 @@
 # Never include the License file.
 Splunk.License
 
+# Never include secrets.
+.env
+
 # Ignore OS files
 .DS_Store
 .DS_Store?
